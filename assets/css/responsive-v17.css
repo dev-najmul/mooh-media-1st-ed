@@ -1,0 +1,201 @@
+/* MOOH MEDIA GRP v17 — phone & tablet refinement only.
+   Desktop remains unchanged. This stylesheet is loaded last, on all four pages.
+*/
+@media (max-width:1080px){
+  .header .desktop-nav,.header .nav-cta,.header-side > .prototype-language{display:none!important}
+  .header .hamburger{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:49px;height:49px;border:1px solid #dfe9e1;border-radius:13px;background:#f5f8f5;color:#123d2b;padding:0;gap:0;transition:background .22s,border-color .22s,color .22s,transform .22s}
+  .header .hamburger:hover,.header .hamburger:focus-visible{background:#eaf2eb;border-color:#b4cbbb;color:#0c3523}
+  .header .hamburger span{display:none}
+  .header .hamburger .mooh-menu-icon{display:block;width:27px;height:27px}
+  .header .header-inner{justify-content:space-between;gap:20px}
+  .header .header-side{margin-left:auto;gap:0}
+  .header .brand img{width:clamp(135px,19vw,172px);max-height:62px}
+}
+.mooh-drawer-overlay{position:fixed;inset:0;z-index:1999;background:rgba(1,19,11,.74);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);}
+.mooh-offcanvas.mobile-menu{
+  position:fixed;top:0;right:0;bottom:0;z-index:2000;
+  width:min(88vw,430px);height:100vh;height:100dvh;
+  padding:0;border:0;background:#fff;box-shadow:-22px 0 80px rgba(0,20,12,.16);
+  display:flex;flex-direction:column;overflow:hidden;
+  transform:translate3d(102%,0,0);transition:transform .35s cubic-bezier(.2,.8,.18,1);
+  color:var(--forest);overscroll-behavior:contain;
+}
+.mooh-offcanvas.mobile-menu.is-open{transform:translate3d(0,0,0)}
+body.mooh-drawer-open{overflow:hidden;overscroll-behavior:none}
+body.mooh-drawer-open .sticky-mobile{visibility:hidden}
+.mooh-drawer-top{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:95px;padding:18px 24px;background:#092e1e;border-bottom:1px solid rgba(255,255,255,.09);flex:none}
+.mooh-drawer-brand{display:flex;align-items:center;justify-content:flex-start;border:0!important;padding:0!important;min-height:0!important;width:auto!important;background:none!important}
+.mooh-drawer-brand img{width:152px;max-width:100%;height:auto;max-height:56px;object-fit:contain}
+.mooh-offcanvas.mobile-menu .mooh-drawer-close{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;border:1px solid rgba(225,239,229,.53);border-radius:50%;background:transparent;color:#fff;padding:0;transition:background .2s,transform .22s,border-color .22s}
+.mooh-offcanvas.mobile-menu .mooh-drawer-close:hover{background:rgba(255,255,255,.13);border-color:#fff;transform:rotate(90deg)}
+.mooh-drawer-content{flex:1 1 auto;overflow:auto;overscroll-behavior:contain;padding:28px 27px max(26px,env(safe-area-inset-bottom));scrollbar-width:thin;scrollbar-color:#cbd9ce transparent}
+.mooh-drawer-kicker{display:flex;align-items:center;gap:9px;font-size:10px;line-height:1.5;letter-spacing:.17em;font-weight:850;color:#718b79;margin:0 0 17px}
+.mooh-drawer-line{width:19px;height:2px;background:var(--flame);display:block}
+.mooh-drawer-links{border-top:1px solid #dce6de}
+.mooh-offcanvas.mobile-menu .mooh-drawer-link{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  width:100%;min-height:62px;padding:14px 1px;border:0;border-bottom:1px solid #dce6de;
+  text-decoration:none;text-align:left;background:none;color:#143d2a;font:750 17px/1.3 var(--copy);
+  letter-spacing:-.017em;transition:color .2s,padding-left .2s;
+}
+.mooh-offcanvas.mobile-menu .mooh-drawer-link:hover{color:var(--flame);padding-left:4px}
+.mooh-drawer-link svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none;color:#7f9a87;transition:transform .22s}
+.mooh-drawer-expand[aria-expanded=true]{color:var(--flame)!important}
+.mooh-drawer-expand[aria-expanded=true] svg{transform:rotate(180deg);color:var(--flame)}
+.mooh-drawer-subnav{padding:10px 0 14px 14px;background:#f6faf7;border-bottom:1px solid #dce6de}
+.mooh-offcanvas.mobile-menu .mooh-subnav-link{display:flex;align-items:center;gap:16px;width:100%;min-height:42px;padding:9px 11px;border:0;text-decoration:none;background:transparent;color:#395c45;font-size:14px;line-height:1.45;font-weight:600;transition:color .2s,background .2s}
+.mooh-offcanvas.mobile-menu .mooh-subnav-link span{font:800 10px/1 var(--copy);color:#8ca592;letter-spacing:.1em;flex:0 0 22px}
+.mooh-offcanvas.mobile-menu .mooh-subnav-link:hover{color:var(--forest);background:#ecf4ee}
+.mooh-drawer-cta{display:grid;gap:12px;margin-top:25px}
+.mooh-offcanvas.mobile-menu .mooh-drawer-primary,.mooh-offcanvas.mobile-menu .mooh-drawer-secondary{
+  width:100%;min-height:53px;padding:14px 17px;border-radius:12px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  font:800 13px/1.3 var(--copy);text-decoration:none;white-space:normal;text-align:left;transition:background .2s,transform .2s,color .2s;
+}
+.mooh-offcanvas.mobile-menu .mooh-drawer-primary{background:var(--flame);color:#0b2719;border:1px solid var(--flame)}
+.mooh-offcanvas.mobile-menu .mooh-drawer-primary:hover{background:#ff6940;transform:translateY(-1px)}
+.mooh-offcanvas.mobile-menu .mooh-drawer-secondary{background:#fff;color:var(--forest);border:1px solid #b1c6b6}
+.mooh-offcanvas.mobile-menu .mooh-drawer-secondary:hover{background:#eff6f0;transform:translateY(-1px)}
+.mooh-offcanvas.mobile-menu .mooh-drawer-primary svg,.mooh-offcanvas.mobile-menu .mooh-drawer-secondary svg{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.mooh-drawer-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #dce6de;margin-top:27px;padding-top:19px;color:#718b79;font-size:10px;font-weight:800;letter-spacing:.11em}
+.mooh-drawer-languages{display:flex;align-items:center;gap:9px;font-weight:850;font-size:13px;letter-spacing:0}
+.mooh-offcanvas.mobile-menu .mooh-drawer-languages a{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:34px;padding:2px 4px;border:0;text-decoration:none;color:#718b79;font-size:13px;font-weight:850}
+.mooh-offcanvas.mobile-menu .mooh-drawer-languages a[aria-current=page]{color:var(--forest);border-bottom:2px solid var(--flame)}
+.mooh-offcanvas a:focus-visible,.mooh-offcanvas button:focus-visible{outline:2px solid var(--flame);outline-offset:2px}
+@media (min-width:1081px){.mooh-offcanvas.mobile-menu,.mooh-drawer-overlay{display:none!important}}
+
+/* tablet refinements: more deliberate spacing and text hierarchy, no desktop changes */
+@media(min-width:701px) and (max-width:1080px){
+  .site-wrap{width:min(calc(100% - 72px),var(--width))}
+  .header{height:80px}
+  .intro-main h2,.sectors-title-row h2,.approach-header h2,.audit-intro h2,.proof-reviews h2{font-size:clamp(45px,5.8vw,63px);line-height:1.07}
+  .offer-feature h3{font-size:clamp(35px,4.4vw,48px)}
+  .service-item h3,.proof-review-card h3{font-size:clamp(28px,3.25vw,37px)}
+  .story-content h2{font-size:clamp(45px,5.6vw,62px)}
+  .audit16-hero-grid{grid-template-columns:minmax(0,1fr);gap:36px;min-height:0;padding:52px 0 66px}
+  .audit16-hero-copy{max-width:820px}
+  .audit16-hero h1{font-size:clamp(59px,6.4vw,81px);max-width:830px}
+  .audit16-form-card{width:min(100%,700px);margin:0;box-shadow:14px 17px 0 rgba(3,28,19,.15)}
+  .audit16 h2{font-size:clamp(43px,5.2vw,59px)}
+  .audit16-form-body h2{font-size:clamp(36px,4.2vw,48px)}
+  .audit16-focus-item h3,.audit16-steps h3,.audit16-next-grid h3{font-size:clamp(27px,3.2vw,38px)}
+  .audit16-report-card h3{font-size:clamp(30px,3.4vw,40px)}
+  .audit16-local-copy h2{font-size:clamp(40px,4.5vw,56px)}
+  .audit16-headrow{grid-template-columns:1fr;gap:18px}
+  .audit16-headrow>p{max-width:710px}
+  .audit16-report-grid{grid-template-columns:1fr;gap:36px}
+  .audit16-report-card{width:min(100%,720px)}
+}
+
+@media(max-width:700px){
+  /* header */
+  .header{height:72px;border-bottom:1px solid #e4eee6;background:#fff}
+  .header-inner{gap:14px}
+  .header .brand img{width:149px;height:auto}
+  .header .hamburger{width:46px;height:46px}
+  .site-wrap{width:calc(100% - 38px)}
+  .mooh-offcanvas.mobile-menu{width:min(90vw,390px)}
+  .mooh-drawer-top{min-height:86px;padding:15px 21px}
+  .mooh-drawer-brand img{width:144px}
+  .mooh-drawer-content{padding:25px 23px max(26px,env(safe-area-inset-bottom))}
+  .mooh-offcanvas.mobile-menu .mooh-drawer-link{min-height:58px;font-size:16px}
+
+  /* main titles retain the primary visual hierarchy; subordinate headings are quieter */
+  .hero h1{font-size:clamp(44px,11.7vw,57px);line-height:1.045}
+  .intro-main h2,.story-content h2,.audit-intro h2,.sectors-title-row h2,.approach-header h2,
+  .proof-reviews h2{font-size:clamp(36px,9.6vw,47px)!important;line-height:1.075;letter-spacing:-.067em}
+  .offer-feature h3{font-size:clamp(29px,8.15vw,39px)!important;line-height:1.09}
+  .service-item h3{font-size:clamp(21px,5.9vw,26px)!important;line-height:1.16}
+  .proof-review-card h3{font-size:clamp(23px,6.55vw,29px)!important;line-height:1.14}
+  .sector-aside h3,.approach-steps h3{font-size:clamp(22px,6vw,27px)!important;line-height:1.15}
+  .section-intro,.offers-section,.story-photo-section,.audit-section,.sectors-section,.approach-section{scroll-margin-top:18px}
+  .audit-big{font-size:clamp(38px,9.8vw,46px)!important;line-height:1.05;margin-bottom:24px}
+  .audit-box label{font-size:13px;line-height:1.45}
+  .audit-field{width:100%;gap:12px}
+  .audit-field input{width:100%;height:58px;font-size:17px;padding:0 18px;box-sizing:border-box}
+  .audit-field button{width:100%;min-height:58px;font-size:16px}
+  .proof-reviews-heading{gap:18px}
+  .proof-review-card{min-height:0}
+  .audit16-hero-grid{padding-top:29px}
+  .audit16-hero h1{font-size:clamp(43px,10.8vw,57px)!important;line-height:1.04}
+  .audit16 h2,.audit16-local-copy h2{font-size:clamp(34px,9.2vw,44px)!important;line-height:1.075;letter-spacing:-.064em}
+  .audit16-form-body h2{font-size:clamp(31px,8vw,38px)!important;line-height:1.075}
+  .audit16-focus-item h3,.audit16-steps h3,.audit16-next-grid h3{font-size:clamp(22px,6.2vw,27px)!important;line-height:1.14}
+  .audit16-report-card h3{font-size:clamp(27px,7.6vw,34px)!important}
+  .audit16-focus-section,.audit16-process-section,.audit16-next-section,.audit16-faq-section{padding-top:68px;padding-bottom:72px}
+  .audit16-report-section{padding-top:70px;padding-bottom:74px}
+  .audit16-steps article,.audit16-steps article+article{padding-top:22px;padding-bottom:24px}
+  .audit16-steps article>span{margin-bottom:13px}
+  .audit16-report-card{box-shadow:7px 9px 0 #dce7dc}
+  .audit16-form-card{box-shadow:none}
+  .audit16-next-grid article{min-height:0;padding:27px 22px}
+  .audit16-next-grid article>span{margin-bottom:19px}
+  .audit16-faq-item summary{font-size:16px;line-height:1.45}
+  .closing-v2-copy h2{font-size:clamp(37px,9.7vw,49px)!important;line-height:1.07}
+  .closing-write{align-self:center!important;text-align:center}
+
+  /* mobile footer: first two columns 50/50, contact full width */
+  .footer-v2-top{padding-bottom:28px}
+  .footer-v2-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:18px!important;row-gap:27px!important;padding:28px 0 40px!important}
+  .footer-v2-grid > .footer-v2-col{min-width:0;padding:15px 0 0!important;border-top:1px solid rgba(204,225,210,.2)}
+  .footer-v2-grid > .footer-v2-contact{grid-column:1/-1;width:100%;margin-top:1px}
+  .footer-v2-col h3{font-size:10px!important;letter-spacing:.13em;line-height:1.4;margin-bottom:9px}
+  .footer-v2-col a,.footer-v2-col>button:not(.button){font-size:13px!important;line-height:1.45;overflow-wrap:anywhere}
+  .footer-v2-col{gap:12px!important}
+  .footer-v2-contact p{font-size:13px;line-height:1.55}
+  .footer-v2-contact .social-row{margin-top:17px}
+  .footer-v2-bottom{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;flex-direction:column;gap:9px!important;padding:20px 6px 100px!important}
+  .footer-v2-bottom > *{margin-inline:auto;text-align:center}
+  .footer-v2-slogan{font-size:clamp(34px,8.5vw,42px)!important}
+  .footer-v2-identity img{width:200px}
+}
+@media(max-width:360px){
+  .site-wrap{width:calc(100% - 30px)}
+  .mooh-drawer-content{padding-left:20px;padding-right:20px}
+  .mooh-offcanvas.mobile-menu{width:92vw}
+  .footer-v2-grid{column-gap:13px!important}
+  .footer-v2-col h3{font-size:9.5px!important}
+  .footer-v2-col a,.footer-v2-col>button:not(.button){font-size:12px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .mooh-offcanvas.mobile-menu,.mooh-offcanvas.mobile-menu *,
+  .header .hamburger{transition:none!important;animation:none!important}
+}
+/* The phone sticky CTA already opens the WhatsApp lead flow; avoid a second
+   floating control obscuring the footer, captions or audit form. */
+@media(max-width:700px){.whatsapp-float{display:none!important}}
+
+/* v19 — requested phone-only cleanup. No tablet / desktop visual changes. */
+@media (max-width:700px){
+  /* Header starts with the main MOOH brand row on phones. */
+  .eyebrow-bar{display:none!important}
+
+  /* Centre the locality line, city chips, and regional link as one composition. */
+  .location-strip{padding:21px 0 23px}
+  .location-strip .location-inner{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:13px;text-align:center;
+  }
+  .location-strip .location-heading{
+    display:block;width:100%;max-width:none;text-align:center;
+    font-size:10px;line-height:1.55;letter-spacing:.075em;
+  }
+  .location-strip .location-cities{
+    display:flex;justify-content:center;align-items:center;align-content:center;
+    flex-wrap:wrap;overflow:visible;width:100%;max-width:100%;
+    gap:8px;line-height:1.3;padding:0;margin:0;
+  }
+  .location-strip .location-cities span{flex:0 0 auto}
+  .location-strip .location-map{
+    display:inline-flex;align-self:center;justify-content:center;
+    margin:0 auto;min-height:42px;text-align:center;
+  }
+
+  /* Centre the last offer's supporting call-to-action. */
+  .service-endnote{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:10px;text-align:center;
+  }
+  .service-endnote > span{display:block;width:100%;text-align:center}
+  .service-endnote .quiet-link{align-self:center;margin:0 auto;text-align:center}
+}
